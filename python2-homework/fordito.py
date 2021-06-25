@@ -9,5 +9,6 @@ while x != 0:
 
 print(my_list)
 
-print(my_list[-1:0])
+reversed_list = my_list[::-1]
+print(reversed_list)
 
