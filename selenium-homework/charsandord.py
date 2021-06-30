@@ -1,0 +1,1 @@
+a challenge2.py-bol kene kiindulni, mivel dictionary,de a reszleteket nem tudom kitalalni
