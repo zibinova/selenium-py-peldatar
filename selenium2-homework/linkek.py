@@ -13,7 +13,7 @@ try:
 
     with open("egyfajl.txt", "w") as f:
         for i in links:
-            f.write(i.text)
+            f.write(i.text + '\n')
 
 except NoSuchElementException as e:
     print('Element not found: ', e)
