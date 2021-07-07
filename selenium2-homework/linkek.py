@@ -11,8 +11,8 @@ try:
     links = driver.find_elements_by_xpath('//a')
     print(len(links))
 
-    for i in links:
-        with open("egyfajl.txt", "w") as f:
+    with open("egyfajl.txt", "w") as f:
+        for i in links:
             f.write(i.text)
 
 except NoSuchElementException as e:
