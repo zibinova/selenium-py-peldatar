@@ -1,4 +1,9 @@
 [ {
+  "buildOrder" : 72,
+  "reportUrl" : "https://zibinova.github.io/selenium-py-peldatar/72/",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
   "buildOrder" : 71,
   "reportUrl" : "https://zibinova.github.io/selenium-py-peldatar/71/",
   "reportName" : "Allure Report with history",
@@ -91,11 +96,6 @@
 }, {
   "buildOrder" : 53,
   "reportUrl" : "https://zibinova.github.io/selenium-py-peldatar/53/",
-  "reportName" : "Allure Report with history",
-  "data" : { }
-}, {
-  "buildOrder" : 52,
-  "reportUrl" : "https://zibinova.github.io/selenium-py-peldatar/52/",
   "reportName" : "Allure Report with history",
   "data" : { }
 } ]
