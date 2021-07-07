@@ -5,7 +5,7 @@ with open("table_in.csv", "r") as file1:
         reader = csv.reader(file1, delimiter=",")
         next(reader)
         for row in reader:
-            res = (", ".join(row[0:2]) + "\n")
+            res = (", ".join(row[:-2]) + "\n")
             file2.write(res)
 
 
