@@ -10,12 +10,12 @@ try:
     driver.get(base_url)
     links = driver.find_elements_by_xpath('//a')
     print(len(links))
-    string_links = ("".join(links))
+    string_links = "".join([str(i) for i in links])
     print(string_links)
 
     for i in links:
         with open("egyfajl.txt", "w") as f:
-            f.write(i.text)
+            f.write(string_links)
 
 except NoSuchElementException as e:
     print('Element not found: ', e)
