@@ -16,13 +16,12 @@ driver.get("http://localhost:9999/editable-table.html")
 
 add_button = driver.find_element_by_tag_name("button")
 add_button.click()
+WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//table/tbody/tr[7]/td[1]/input")))
 
 added_row = driver.find_element_by_xpath("//table/tbody/tr[7]")
 
-cell_name = driver.find_element_by_xpath("//table/tbody/tr[7]/td[1]")
-
-WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//table/tbody/tr[7]/td[1]")))
+cell_name = driver.find_element_by_xpath("//table/tbody/tr[7]/td[1]/input")
 
 cell_name.send_keys("Xiaomi")
 
