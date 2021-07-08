@@ -13,12 +13,21 @@ nowutc = datetime.now(timezone.utc)
 
 print(nowutc)
 
+# dob = row[2]
+# print(dob)
+# dobnew = datetime.strptime(dob, "%Y-%m-%d").strftime("%m/%d/%Y")
+
 
 driver.find_element_by_id("example-input-date").send_keys("6/5/2021")
 
 driver.find_element_by_id("example-input-date-time").send_keys("2012.05.05 05:05:05:555")
 
-driver.find_element_by_id("example-input-date-time-local").send_keys("05/12/2000 12:01 PM")
+
+frmt = "%m/%d/%Y %H:%M %p"
+date_string = "05/12/2000 12:01 PM"
+date = datetime.strptime("05/12/2000 12:01 PM", frmt).strftime("%m/%d/%Y %H:%M %p")
+
+driver.find_element_by_id("example-input-date-time-local").send_keys(date)
 
 driver.find_element_by_id("example-input-month").send_keys("December 1995")
 
