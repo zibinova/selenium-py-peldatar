@@ -14,12 +14,13 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 try:
     driver.get("http://localhost:9999/simplevalidation.html")
 
-    element_to_hover_over = driver.find_element_by_id("test-button")
-    hover = ActionChains(driver).move_to_element(element_to_hover_over)
+    sign_up_button = driver.find_element_by_id("test-button")
+    hover = ActionChains(driver).move_to_element(sign_up_button)
     hover.perform()
 
     msg = WebDriverWait(driver, 5).until(
-        EC.visibility_of_element_located((By.XPATH, "//button[@id='test-button']"))).get_attribute("validationMessage")
+        EC.visibility_of_element_located((By.XPATH, "//button[@id='test-button']"))).get_attribute(
+        "data-jsv-form-tooltip")
 
     print(msg)
     assert msg is not None
