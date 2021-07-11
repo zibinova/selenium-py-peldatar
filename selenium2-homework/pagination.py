@@ -34,5 +34,14 @@ try:
             next_button.click()
     pprint.pprint(extracted_data)
     print(len(extracted_data))
+
+    with open("extract.csv", 'w') as file:
+        file.write(", ".join([item['birth_date'] for item in extracted_data]) + "\n")
+        file.write(", ".join([item['first_name'] for item in extracted_data]) + "\n")
+        file.write(", ".join([item['id'] for item in extracted_data]) + "\n")
+        file.write(", ".join([item['second_name'] for item in extracted_data]) + "\n")
+        file.write(", ".join([item['second_surname'] for item in extracted_data]) + "\n")
+        file.write(", ".join([item['surname'] for item in extracted_data]) + "\n")
+
 finally:
     pass
